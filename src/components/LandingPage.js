@@ -1,6 +1,6 @@
 import React from 'react';
 import { Nav, NavItem, NavLink } from 'reactstrap';
-function Category() {
+function LandingPage() {
   return (
     <div className="landingpage">
         <Nav navbar>
@@ -18,4 +18,4 @@ function Category() {
   );
 }
 
-export default Category;
+export default LandingPage;
