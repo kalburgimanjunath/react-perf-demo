@@ -1,0 +1,12 @@
+export default const JOBS = [{
+    title:'front end developer',
+    designation:'lead developer',
+    skills:'react,angular,nodejs,jekyll',
+    description:'lorem param lorem param  lorem param'
+},  
+{
+    title:'UI developer',
+    designation:'lead developer',
+    skills:'react,angular,nodejs,jekyll,html,css',
+    description:'lorem param lorem param  lorem param'
+}]

@@ -1,0 +1,26 @@
+*{
+  margin:0;
+  padding:0;
+}
+.landingpage{
+  padding:20px;
+}
+.landingpage .navbar-nav{
+  flex-direction: row;
+  margin: 20% auto;
+}
+
+.landingpage .navbar-nav li{
+  padding:50px;
+  background-color: #0099e5;
+  margin: 20px;
+}
+
+.landingpage .navbar-nav li:hover{  
+  background-color:#34bf49;
+  cursor: pointer;
+}
+
+.landingpage .navbar-nav li a{
+  color:white;
+}
