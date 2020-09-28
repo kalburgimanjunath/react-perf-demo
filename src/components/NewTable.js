@@ -5,7 +5,7 @@ function NewTable(props) {
   return (
       <>
       {recorddata ? (
-        <Table hover>
+        <Table hover md="6">
         <tbody>
           <tr>
               <th>Id</th>

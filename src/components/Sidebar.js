@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+
 function Sidebar() {
   const [collapsed, setCollapsed] = useState(true);
 
@@ -7,17 +8,12 @@ function Sidebar() {
   return (
     <div className="sidebar">
       
-      <Navbar color="light" light expand="md">
+      <Navbar color="light" expand="md">
         <NavbarBrand href="/" className="mr-auto">Brand Icon</NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
-            {/* <NavItem>
-              <NavLink href="/jobs">Jobs</NavLink>
-            </NavItem>
-            <NavItem>
-            <NavLink href="/learning">Learning</NavLink>
-            </NavItem> */}
+           
             <NavItem>
             <NavLink href="/">Home</NavLink>
             </NavItem>
@@ -27,12 +23,7 @@ function Sidebar() {
             <NavItem>
             <NavLink href="/performance">Performance</NavLink>
             </NavItem>
-            {/* <NavItem>
-            <NavLink href="/gists">gists</NavLink>
-            </NavItem>
-            <NavItem>
-            <NavLink href="/profile">Profile</NavLink>
-            </NavItem> */}
+           
             
           </Nav>
         </Collapse>

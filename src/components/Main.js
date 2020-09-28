@@ -13,7 +13,6 @@ import {
     Switch,
     Route
   } from "react-router-dom";
-// import Performance from './Performance'
 function Main() {
   return (
     <div className="main">

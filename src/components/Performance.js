@@ -15,11 +15,6 @@ class Performance extends React.Component {
     recorddata:null,
     analyticsdata:null
   }
-  componentWillUnmount(){
-    console.log('component will mount called')
-    
-  }
-  
 
   clockPerformance(profilerId, mode, actualTime, baseTime, startTime, commitTime) {  
     let testdata = [];
@@ -32,14 +27,10 @@ class Performance extends React.Component {
       startTime, 
       commitTime
     })   
-    console.log({profilerId, mode, actualTime, baseTime, startTime, commitTime});
     localStorage.setItem(profilerId, JSON.stringify(testdata));
     
   }
 
-  // onLocalStorage = (key,value)=>{    
-  //   localStorage.setItem(key, JSON.stringify(value));
-  // }
   async loadData(){
     const response = await fetch(`https://jsonplaceholder.typicode.com/comments`);
     const json = await response.json();
@@ -58,23 +49,24 @@ class Performance extends React.Component {
     return (
         <>
           <Container>
-            <Button onClick={()=>this.loadData()}>Start</Button>
-           
+            <Button onClick={()=>this.loadData()} >Start</Button>
+            <ModalISP buttonLabel="Check Performance" modalTitle="Performance of Components" testdata={analyticsdata}/>
+                 
               {recorddata ?(
                
                 <>
-                  <ModalISP buttonLabel="Check Performance" modalTitle="Performance of Components" testdata={analyticsdata}/>
-                  <h4>Fetched Data from 2 component list and table</h4>
+                   <h2>Fetched Data from 2 component list and table</h2>
                   <Row>
-                        <Col xs="6" sm="4" md="6">
-                          <Profiler id="Table" onRender={this.clockPerformance}>
-                            <NewTable recorddata = {recorddata}/>                      
-                          </Profiler>
-                        </Col>
-                        <Col xs="6" sm="4" md="6">
+                        
+                        <Col xs="6" sm="4" md="4">
                         <Profiler id="List" onRender={this.clockPerformance}>
                           <List recorddata = {recorddata}/>
                         </Profiler>
+                        </Col>
+                        <Col xs="6" sm="4" md="8">
+                          <Profiler id="Table" onRender={this.clockPerformance}>
+                            <NewTable recorddata = {recorddata}/>                      
+                          </Profiler>
                         </Col>
                   </Row>
                   

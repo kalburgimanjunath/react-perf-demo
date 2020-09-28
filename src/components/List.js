@@ -15,7 +15,7 @@ function List(props) {
       {recorddata.map((item)=>{
             return (
                 <Card key={item.id}>
-                    <CardBody>
+                    <CardBody className="justify-content-start">
                         <CardTitle><Link to="">{item.name}</Link></CardTitle>
                         <CardSubtitle>{item.email}</CardSubtitle>
                         <CardText>{item.body}</CardText>                    
